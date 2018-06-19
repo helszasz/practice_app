@@ -1,54 +1,16 @@
-# project specific
-flaskapp/*
+venv/
 
-# prebaked .gitignore
-*.py[cod]
+*.pyc
+__pycache__/
 
-# C extensions
-*.so
+instance/
 
-# Packages
-*.egg
-*.egg-info
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-lib64
-venv
-.venv
-.env
-
-# Installer logs
-pip-log.txt
-
-# Unit test / coverage reports
+.pytest_cache/
 .coverage
-.tox
-nosetests.xml
+htmlcov/
 
-# si
-*.mo
-
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
-
-# Complexity
-output/*.html
-output/*/index.html
-
-# Sphinx
-docs/_build
-README.html
-
-# Cookiecutter
-output/
+dist/
+build/
+*.egg-info/
 
 .DS_Store
