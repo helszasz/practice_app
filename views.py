@@ -8,7 +8,7 @@ api = Namespace('data', description='fake browsing data')
 
 data = api.model('Data', {
     'id': fields.String(required=True, description='user id'),
-    'click': fields.Int(required=True, description='number click in current session'),
+    'click': fields.Integer(required=True, description='number click in current session'),
     'url': fields.String(required=True, description='current url'),
 })
 
@@ -22,7 +22,7 @@ DATA = [
     {'id': '2', 'click': 2, 'url': 'https://www.google.com/search?tbm=isch&source=hp&biw=1394&bih=736&ei=J48qW76kOojW5gL98oqwCA&q=golden+retriever&oq=golden&gs_l=img.3.0.0l10.531.1736.0.3168.11.8.2.1.1.0.147.557.6j1.7.0....0...1ac.1.64.img..1.10.566.0...0.PQ5cA3t8aDY'},
 ]
 
-@app.route('/')
+@api.route('/')
 class ShowData(Resource):
     @api.doc('show_data')
     @api.marshal_list_with(data)
@@ -32,7 +32,7 @@ class ShowData(Resource):
 @api.route('/<id>')
 @api.param('id', 'User Id')
 @api.response(404, 'User not found')
-class USer(Resource):
+class User(Resource):
     @api.doc('get_user')
     @api.marshal_with(data)
     def get(self, id):
