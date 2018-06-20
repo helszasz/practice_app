@@ -1,7 +1,6 @@
-from . import app
+from . import api
 from flask import render_template
 from flask_restplus import Api, Namespace, Resource, fields
-
 
 api = Namespace('data', description='fake browsing data')
 
