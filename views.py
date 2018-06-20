@@ -4,7 +4,6 @@ from flask_restplus import Api, Namespace, Resource, fields
 
 api = Namespace('data', description='fake browsing data')
 
-
 data = api.model('Data', {
     'id': fields.String(required=True, description='user id'),
     'click': fields.Integer(required=True, description='number click in current session'),
@@ -24,7 +23,7 @@ DATA = [
 @api.route('/')
 class ShowData(Resource):
     @api.doc('show_data')
-    @api.marshal_list_with(data)
+    @api.marshal_with(data, as_list=True)
     def get(self):
         return DATA
 
