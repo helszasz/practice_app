@@ -1,0 +1,25 @@
+{
+  "name": "practice_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "serverless-python-requirements": "^4.1.0",
+    "serverless-wsgi": "^1.4.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helszasz/practice_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helszasz/practice_app/issues"
+  },
+  "homepage": "https://github.com/helszasz/practice_app#readme"
+}
